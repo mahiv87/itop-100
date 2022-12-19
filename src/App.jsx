@@ -66,7 +66,7 @@ function App() {
 	return (
 		<AppContext.Provider value={content}>
 			<div className="App h-full bg-background text-4xl font-bold">
-				<header className="bg-secondary mx-auto h-16 w-1/2 flex justify-center items-center border-headline border-4 rounded-md">
+				<header className="bg-secondary mx-auto h-16 w-1/2 flex justify-center items-center border-headline border-l-4 border-r-4 border-b-4 rounded-b-md">
 					<h1 className="text-headline">iTop 100</h1>
 				</header>
 				<SearchBar content={content} />
@@ -83,7 +83,7 @@ function App() {
 						/>
 					))}
 				</div>
-				<footer className="bg-secondary mx-auto h-16 w-1/2 flex justify-center items-center border-headline border-4 rounded-md">
+				<footer className="bg-secondary mx-auto h-16 w-1/2 flex justify-center items-center border-headline border-l-4 border-t-4 border-r-4 rounded-t-md">
 					<p className="text-headline text-sm">
 						<span>&copy;</span> Marcus Herrera 2022
 					</p>
