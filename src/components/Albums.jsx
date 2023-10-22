@@ -8,9 +8,9 @@ export default function Albums({ albumName, albumCover, artist, albumLink }) {
 			href={albumLink}
 			target="_blank"
 		>
-			<img className="pr-2" src={albumCover} alt="" />
-			<p className="text-xs">{albumName}</p>
-			<p className="text-xs pr-2">{artist}</p>
+			<img className="pr-2 rounded-md" src={albumCover} alt="" />
+			<p className="text-sm">{albumName}</p>
+			<p className="text-sm pr-2">{artist}</p>
 		</a>
 	);
 }

@@ -83,7 +83,7 @@ function App() {
 						/>
 					))}
 				</div>
-				<footer className="bg-secondary mx-auto h-16 w-1/2 flex justify-center items-center border-headline border-l-4 border-t-4 border-r-4 rounded-t-md">
+				<footer className="bg-secondary mx-2 md:mx-auto h-16 max-w-main flex justify-center items-center border-headline border-l-4 border-t-4 border-r-4 rounded-t-md">
 					<p className="text-headline text-sm">
 						<span>&copy;</span> Marcus Herrera 2022
 					</p>
