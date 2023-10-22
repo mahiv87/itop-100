@@ -1,8 +1,10 @@
 import React, { useState, useEffect, createContext } from 'react';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 import { getTopAlbums } from './utils/getTunes';
 import SearchBar from './components/SearchBar';
 import Albums from './components/Albums';
+import loader from '../assets/loader.json';
 
 export const AppContext = createContext();
 
@@ -45,6 +47,7 @@ function App() {
 
 	// State for api data
 	const [details, setDetails] = useState(initialState);
+	const [loading, setLoading] = useState(true);
 
 	// Set content for global context
 	const content = {
@@ -58,10 +61,33 @@ function App() {
 		getTopAlbums().then((items) => {
 			if (mounted) {
 				setDetails(items);
+				setLoading(false);
 			}
 		});
 		return () => (mounted = false);
 	}, []);
+
+	if (loading)
+		return (
+			<div className="App h-full bg-background text-4xl font-bold">
+				<header className="bg-secondary mx-2 md:mx-auto h-16 max-w-main flex justify-center items-center border-headline border-l-4 border-r-4 border-b-4 rounded-b-md">
+					<h1 className="text-headline">iTop 100</h1>
+				</header>
+				<div className="loader-container">
+					<Player
+						autoplay
+						loop
+						src={loader}
+						style={{ height: '300px', width: '300px' }}
+					/>
+				</div>
+				<footer className="bg-secondary mx-2 md:mx-auto h-16 max-w-main flex justify-center items-center border-headline border-l-4 border-t-4 border-r-4 rounded-t-md">
+					<p className="text-headline text-sm">
+						<span>&copy;</span> Marcus Herrera 2022
+					</p>
+				</footer>
+			</div>
+		);
 
 	return (
 		<AppContext.Provider value={content}>
