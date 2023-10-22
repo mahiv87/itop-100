@@ -28,9 +28,9 @@ export default function SearchBar() {
 		<form
 			onSubmit={handleFormSubmit}
 			autoComplete="off"
-			className="w-full flex flex-col md:flex-row justify-center items-center"
+			className="max-w-main mx-auto px-2 md:px-0 flex flex-col md:flex-row justify-center items-center"
 		>
-			<div className="autocomplete w-5/6 lg:w-1/3 m-2">
+			<div className="autocomplete w-full m-2 md:mx-0">
 				<input
 					className="bg-primary pl-2 border-headline focus:border-button border-4 rounded-md"
 					type="text"

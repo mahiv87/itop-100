@@ -66,12 +66,12 @@ function App() {
 	return (
 		<AppContext.Provider value={content}>
 			<div className="App h-full bg-background text-4xl font-bold">
-				<header className="bg-secondary mx-auto h-16 w-1/2 flex justify-center items-center border-headline border-l-4 border-r-4 border-b-4 rounded-b-md">
+				<header className="bg-secondary mx-2 md:mx-auto h-16 max-w-main flex justify-center items-center border-headline border-l-4 border-r-4 border-b-4 rounded-b-md">
 					<h1 className="text-headline">iTop 100</h1>
 				</header>
 				<SearchBar content={content} />
 
-				<div className="container mx-auto px-2 flex flex-col justify-center items-center">
+				<div className="container max-w-main mx-auto px-2 md:px-0 flex flex-col justify-center items-center">
 					{details.feed.entry.map((item) => (
 						<Albums
 							albumName={item['im:name'].label}

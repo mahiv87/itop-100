@@ -10,6 +10,9 @@ module.exports = {
 				paragraph: '#172c66',
 				primary: '#f3d2c1',
 				secondary: '#8bd3dd'
+			},
+			maxWidth: {
+				main: '768px'
 			}
 		}
 	},
